@@ -146,6 +146,10 @@ def find_min_hill_climbing_expand(
             short_window = max(1, short_window)
             long_window = max(short_window + 1, long_window)
             print(f"Found better neighbor: {best_neighbor} with PnL={best_pnl:.2f}")
+            radius = 1
+
+        # TODO: save already checked neighbors to avoid re-checking
+
         else:
             print(f"No better neighbor found at radius {radius}, increasing radius.")
             radius += 1
