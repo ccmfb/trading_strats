@@ -48,7 +48,7 @@ class Strategy:
 
         final_value = cash + (shares * self.data['Close'].iloc[-1])
 
-        return final_value
+        return final_value - initial_cash
 
 
     def buy_and_hold_pnl(self, initial_cash: float = 1000000) -> float:
@@ -68,7 +68,7 @@ class Strategy:
         
         final_value = cash + (shares * self.data['Close'].iloc[-1])
 
-        return final_value
+        return final_value - initial_cash
 
 
     def plot_signals(self) -> tuple:
